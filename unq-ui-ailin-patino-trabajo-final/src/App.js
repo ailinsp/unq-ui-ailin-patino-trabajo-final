@@ -11,7 +11,6 @@ function App() {
   return (
     <div style={{ backgroundColor: '#2b2a28', height: '120vh' }}> 
       <Router>
-        <Navbar />
         <Switch>
           <Route path="/play" component ={ Game } />
           <Route path="/rules" component ={ Rules } />
