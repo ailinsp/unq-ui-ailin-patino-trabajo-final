@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/unq-ui-ailin-patino-trabajo-final/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/unq-ui-ailin-patino-trabajo-final/static/js/main.1779a7ca.chunk.js",
+    "main.js.map": "/unq-ui-ailin-patino-trabajo-final/static/js/main.1779a7ca.chunk.js.map",
+    "runtime-main.js": "/unq-ui-ailin-patino-trabajo-final/static/js/runtime-main.c7ac0b94.js",
+    "runtime-main.js.map": "/unq-ui-ailin-patino-trabajo-final/static/js/runtime-main.c7ac0b94.js.map",
+    "static/js/2.d20b0d9f.chunk.js": "/unq-ui-ailin-patino-trabajo-final/static/js/2.d20b0d9f.chunk.js",
+    "static/js/2.d20b0d9f.chunk.js.map": "/unq-ui-ailin-patino-trabajo-final/static/js/2.d20b0d9f.chunk.js.map",
+    "static/js/3.1b576481.chunk.js": "/unq-ui-ailin-patino-trabajo-final/static/js/3.1b576481.chunk.js",
+    "static/js/3.1b576481.chunk.js.map": "/unq-ui-ailin-patino-trabajo-final/static/js/3.1b576481.chunk.js.map",
+    "index.html": "/unq-ui-ailin-patino-trabajo-final/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/unq-ui-ailin-patino-trabajo-final/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.d20b0d9f.chunk.js.LICENSE.txt": "/unq-ui-ailin-patino-trabajo-final/static/js/2.d20b0d9f.chunk.js.LICENSE.txt",
+    "static/media/lizard.9f8fe673.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/lizard.9f8fe673.jpg",
+    "static/media/paper.de947149.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/paper.de947149.jpg",
+    "static/media/play.a13293cd.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/play.a13293cd.jpg",
+    "static/media/rock.79c0cb49.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/rock.79c0cb49.jpg",
+    "static/media/rpslsExplained.4f74445f.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/rpslsExplained.4f74445f.jpg",
+    "static/media/rpslsLogo.1f9c7319.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/rpslsLogo.1f9c7319.jpg",
+    "static/media/rules.e96defcf.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/rules.e96defcf.jpg",
+    "static/media/scissors.b71dba23.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/scissors.b71dba23.jpg",
+    "static/media/spock.de64e445.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/spock.de64e445.jpg",
+    "static/media/unknown.c3cc22a8.jpg": "/unq-ui-ailin-patino-trabajo-final/static/media/unknown.c3cc22a8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c7ac0b94.js",
+    "static/js/2.d20b0d9f.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.1779a7ca.chunk.js"
+  ]
+}
