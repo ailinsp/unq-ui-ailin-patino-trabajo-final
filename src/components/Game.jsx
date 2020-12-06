@@ -26,6 +26,14 @@ function Game(){
         if (result.finish==='lost') setComputerScore(computerScore+1);
     }
 
+    const reset = () => {
+        setPlayerOneChoice(null);
+        setRandomChoice(null);
+        setResult(null);
+        setPlayerOneScore(0);
+        setComputerScore(0)
+    }
+
     const handleSelect = (option) => {
         setResult(null);
         setPlayerOneChoice(option);
@@ -44,7 +52,10 @@ function Game(){
                        playerTwoChoice={randomChoice} />
 
                 <div style={{ display: "flex", justifyContent: "center"}}>
-                    <Button  onClick={() => play()}> </Button>
+                    <Button  onClick={() => play()}> PLAY! </Button>
+                </div>
+                <div style={{ display: "flex", justifyContent: "center"}}>
+                    <Button  onClick={() => reset()}> RESET GAME </Button>
                 </div>
             </div>
 
