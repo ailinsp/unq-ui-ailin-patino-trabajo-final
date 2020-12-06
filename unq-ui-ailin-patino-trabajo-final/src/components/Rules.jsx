@@ -1,5 +1,5 @@
 import React from 'react';
-import rules from './../pictures/RPSLSexplained.jpg'
+import rules from './../pictures/rpslsExplained.jpg'
 import { List, Typography } from 'antd';
 
 

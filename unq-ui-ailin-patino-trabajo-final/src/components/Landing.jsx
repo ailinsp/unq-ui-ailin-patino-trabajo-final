@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import {NavLink} from 'react-router-dom';
-import rules from './../pictures/RULES.jpg'
-import play from './../pictures/PLAY.jpg'
+import rules from './../pictures/rules.jpg'
+import play from './../pictures/play.jpg'
 
 
 

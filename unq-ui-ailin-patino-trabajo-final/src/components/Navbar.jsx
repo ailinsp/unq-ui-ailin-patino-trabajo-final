@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import { Menu } from 'antd';
-import logo from './../pictures/RPSLSlogo.jpg'
+import logo from './../pictures/rpslsLogo.jpg'
 
 
 function Navbar(){

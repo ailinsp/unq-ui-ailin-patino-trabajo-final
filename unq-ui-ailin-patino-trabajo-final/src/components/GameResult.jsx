@@ -5,9 +5,9 @@ import unknown from './../pictures/unknown.jpg'
 const GameResult= ({result, playerOneChoice, playerTwoChoice}) => {
 
     return(
-        <div>
+        <div style={{display: "flex", justifyContent: "center"}}>
 
-            <div>
+            <div style={{paddingRight: "200px"}}>
                 <h3>Player 1</h3>
                     {<img src={playerOneChoice ? `./../pictures/${playerOneChoice}.jpg` : {unknown}}
                         alt='player one' />}
@@ -18,11 +18,12 @@ const GameResult= ({result, playerOneChoice, playerTwoChoice}) => {
                 {result && <p>{result.message}</p>}
             </div>
 
-            <div>
+            <div style={{paddingLeft: "200px"}}>
                 <h3>Player 2</h3>
                     <img src={playerTwoChoice ? `./../pictures/${playerTwoChoice}.jpg` : {unknown}}
                         alt='player two'/>
             </div>
+
             
         </div>
     )

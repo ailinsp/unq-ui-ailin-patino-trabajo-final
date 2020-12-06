@@ -33,30 +33,26 @@ function Game(){
     }
 
     return(
-        <div style={{display: "flex", justifyContent: "center", paddingTop: "20px"}}>
-
-            <div style={{textAlign: "center"}}> score player 1</div>
+        <div style={{display: "flex", justifyContent: "center", paddingTop: "80px"}}>
 
             <div>
                 <Options setAnOption={handleSelect}/>                
             </div>
 
-            <div style={{display: "flex", justifyContent: "center",minWidth:"800px"}}>
+            <div style={{justifyContent: "center", minWidth:"800px"}}>
                 <GameResult result={result} playerOneChoice={playerOneChoice}
                        playerTwoChoice={randomChoice} />
 
-                <Button  onClick={() => play()}>
-                        
-                </Button>
+                <div style={{ display: "flex", justifyContent: "center"}}>
+                    <Button  onClick={() => play()}> </Button>
+                </div>
             </div>
 
-            
             <div >
                 <Options setAnOption={handleSelect}/>
             </div>
 
-            <div style={{textAlign: "center"}}> score player 2</div>
-
+    
         </div>
     )
 }
