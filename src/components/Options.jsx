@@ -10,23 +10,23 @@ const Options = ({setAnOption}) => {
     return (
         <div>
             <div onClick={() => setAnOption('rock')}>
-                <img src={rock} alt='rock' style={{width:'110px',height:'110px'}}/>
+                <img src={rock} alt='rock' style={{width:'110px',height:'110px', cursor: "pointer"}}/>
             </div>
             
             <div onClick={() => setAnOption('paper')}>
-                <img src={paper} alt='paper' style={{width:'110px',height:'110px'}}/>
+                <img src={paper} alt='paper' style={{width:'110px',height:'110px', cursor: "pointer"}}/>
             </div>
             
             <div onClick={() => setAnOption('scissors')}>
-                <img src={scissors} alt='scissors'style={{width:'110px',height:'110px'}}/> 
+                <img src={scissors} alt='scissors'style={{width:'110px',height:'110px', cursor: "pointer"}}/> 
             </div>
 
             <div onClick={() => setAnOption('lizard')}>
-                <img src={lizard} alt='lizard'style={{width:'110px',height:'110px'}} /> 
+                <img src={lizard} alt='lizard'style={{width:'110px',height:'110px', cursor: "pointer"}} /> 
             </div>
 
             <div onClick={() => setAnOption('spock')}>
-                <img src={spock} alt='spock' style={{width:'110px',height:'110px'}}/> 
+                <img src={spock} alt='spock' style={{width:'110px',height:'110px', cursor: "pointer"}}/> 
             </div>
         </div>
     )

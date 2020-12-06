@@ -1,9 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import {NavLink} from 'react-router-dom';
+import logo from './../pictures/rpslsLogo.jpg'
 import rules from './../pictures/rules.jpg'
-import play from './../pictures/play.jpg'
-
+import onePlayer from './../pictures/onePlayer.jpg'
+import twoPlayers from './../pictures/twoPlayers.jpg'
 
 
 function Landing(){
@@ -12,24 +13,29 @@ function Landing(){
         <div style={{
             display: 'flex',
             flexDirection: 'column',
-            minHeight: '80vh',
+            minHeight: '50vh',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            paddingTop: '50px',
             }}> 
 
-            <Row gutter={[16, 24]}>
-                <Col className="gutter-row" span={6} >
+            
+
+               
+                    <img alt={""} src={logo} style={{width:'662px',height:'254px'}}/>
+                
+
                     <NavLink to={`/rules`}>
-                        <img alt={""} src={rules} style={{width:'200px',height:'77px'}}/>
+                        <img alt={""} src={rules} style={{width:'400px',height:'66px', padding:'10px' }}/>
                     </NavLink>
-                </Col>
-                <Col className="gutter-row" span={6} >
 
                     <NavLink to={`/play`}>
-                        <img alt={""} src={play} style={{width:'200px',height:'77px'}}/>
+                        <img alt={""} src={onePlayer} style={{width:'400px',height:'66px', padding:'10px' }}/>
                     </NavLink>
-                </Col>
-            </Row>
+
+                    <NavLink to={`/play`}>
+                        <img alt={""} src={twoPlayers} style={{width:'400px',height:'66px', padding:'10px' }}/>
+                    </NavLink>
 
         </div>
     )

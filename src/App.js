@@ -9,7 +9,7 @@ import Game from './components/Game';
 
 function App() {
   return (
-    <div style={{ backgroundColor: '#2b2a28', height: '120vh' }}> 
+    <div style={{ backgroundColor: '#2b2a28', height: '100vh' }}> 
       <Router>
         <Switch>
           <Route path="/play" component ={ Game } />

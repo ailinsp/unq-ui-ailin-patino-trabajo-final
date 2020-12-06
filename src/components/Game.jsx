@@ -51,11 +51,11 @@ function Game(){
                 <GameResult result={result} playerOneChoice={playerOneChoice}
                        playerTwoChoice={randomChoice} />
 
-                <div style={{ display: "flex", justifyContent: "center"}}>
-                    <Button  onClick={() => play()}> PLAY! </Button>
+                <div style={{ display: "flex", justifyContent: "center", cursor: "pointer"}}>
+                    <Button type="primary" shape="round" onClick={() => play()}> PLAY! </Button>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center"}}>
-                    <Button  onClick={() => reset()}> RESET GAME </Button>
+                    <Button type="primary" shape="round" onClick={() => reset()}> RESET GAME </Button>
                 </div>
             </div>
 
