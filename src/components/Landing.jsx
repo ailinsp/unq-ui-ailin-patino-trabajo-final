@@ -18,23 +18,19 @@ function Landing(){
             paddingTop: '50px',
             }}> 
 
+            <img alt={""} src={logo} style={{width:'662px',height:'254px'}}/>
             
+            <NavLink to={`/rules`}>
+                <img alt={""} src={rules} style={{width:'400px',height:'66px', padding:'10px' }}/>
+            </NavLink>
 
-               
-                    <img alt={""} src={logo} style={{width:'662px',height:'254px'}}/>
-                
+            <NavLink to={`/onePlayer`}>
+                <img alt={""} src={onePlayer} style={{width:'400px',height:'66px', padding:'10px' }}/>
+            </NavLink>
 
-                    <NavLink to={`/rules`}>
-                        <img alt={""} src={rules} style={{width:'400px',height:'66px', padding:'10px' }}/>
-                    </NavLink>
-
-                    <NavLink to={`/onePlayer`}>
-                        <img alt={""} src={onePlayer} style={{width:'400px',height:'66px', padding:'10px' }}/>
-                    </NavLink>
-
-                    <NavLink to={`/play`}>
-                        <img alt={""} src={twoPlayers} style={{width:'400px',height:'66px', padding:'10px' }}/>
-                    </NavLink>
+            <NavLink to={`/twoPlayers`}>
+                <img alt={""} src={twoPlayers} style={{width:'400px',height:'66px', padding:'10px' }}/>
+            </NavLink>
 
         </div>
     )

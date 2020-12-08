@@ -9,7 +9,6 @@ import restartGame from './../pictures/restartGame.jpg'
 import back from './../pictures/back.jpg'
 
 
-
 function OnePlayer(){
 
     const [playerOneChoice, setPlayerOneChoice] = useState(null);
@@ -55,13 +54,13 @@ function OnePlayer(){
         <div style={{display: "flex", justifyContent: "center"}}>
 
             <div>
-                <OptionsPlayer setAnOption={handleSelect}/>
+                <OptionsPlayer setAnOption={handleSelect} playerRole={"player1"}/>
             </div>
 
             <div style={{justifyContent: "center", minWidth:"800px"}}>
 
                 <GameResult result={result} playerOneChoice={playerOneChoice} playerTwoChoice={randomChoiceView} 
-                            playerOneScore={playerOneScore} computerScore={computerScore}/>
+                            playerOneScore={playerOneScore} playerTwoScore={computerScore}/>
 
                 <div style={{paddingTop: "10px"}}>
                     <div style={{ display: "flex", justifyContent: "center", cursor: "pointer"}}>
@@ -83,7 +82,6 @@ function OnePlayer(){
                 <OptionsDisabled/>
             </div>
 
-    
         </div>
     )
 }

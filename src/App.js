@@ -4,20 +4,26 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Landing from './components/Landing';
 import Rules from './components/Rules';
 import OnePlayer from './components/OnePlayer';
+import TwoPlayers from './components/TwoPlayers';
 
 
 function App() {
   return (
-    <div style={{ backgroundColor: '#2b2a28', height: '100vh' }}> 
+    <div style={{backgroundColor: '#2b2a28', height: '100vh'}}>
+
       <Router>
+
         <Switch>
           <Route path="/onePlayer" component ={ OnePlayer } />
+          <Route path="/twoPlayers" component ={ TwoPlayers } />
           <Route path="/rules" component ={ Rules } />
           <Route path="/" component ={ Landing } />
-
         </Switch>
+
     </Router>
-    </div>);
+
+    </div>
+  );
 }
 
 export default App;

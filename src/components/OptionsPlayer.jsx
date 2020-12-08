@@ -5,17 +5,26 @@ import rock from './../pictures/rock.jpg'
 import scissors from './../pictures/scissors.jpg'
 import spock from './../pictures/spock.jpg'
 import player1 from './../pictures/player1.jpg'
+import player2 from './../pictures/player2.jpg'
 
 
 
-const OptionsPlayer = ({setAnOption}) => {
+const OptionsPlayer = ({setAnOption, playerRole}) => {
+
+    const player = (type) => {
+        if (type === "player1"){
+            return player1
+        }
+        if (type === "player2"){
+            return player2
+        }
+    }
 
     return (
         <div style= {{paddingTop: "40px"}}>
 
-            <img src={player1} alt='' style={{width:'110px', height:'48px'}}/> 
+            <img src={player(playerRole)} alt='' style={{width:'110px', height:'48px'}}/> 
 
-            
             <div onClick={() => setAnOption('rock')}>
                 <img src={rock} alt='rock' style={{width:'110px',height:'110px', cursor: "pointer"}}/>
             </div>
@@ -35,6 +44,7 @@ const OptionsPlayer = ({setAnOption}) => {
             <div onClick={() => setAnOption('spock')}>
                 <img src={spock} alt='spock' style={{width:'110px',height:'110px', cursor: "pointer"}}/> 
             </div>
+
         </div>
     )
 }

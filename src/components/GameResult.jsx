@@ -7,7 +7,7 @@ import scissors from './../pictures/scissors.jpg'
 import spock from './../pictures/spock.jpg'
 
 
-const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, computerScore}) => {
+const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, playerTwoScore, isReadyPlayer1, isReadyPlayer2}) => {
 
     const picture = (choice) => {
         if (choice === "rock"){
@@ -33,6 +33,7 @@ const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, co
             <div style={{display: "flex", justifyContent: "center", paddingTop: "100px", textAlign: "center", color: "white"}}>
                 
                 <div>
+                    <h2> {isReadyPlayer1} </h2>
                     <img style={{width:'110px', height:'110px'}} src={playerOneChoice ? picture(playerOneChoice) : unknown} alt='player one'/>
                     <h2>SCORE</h2>
                     <h1> {playerOneScore} </h1>
@@ -41,10 +42,10 @@ const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, co
                 <h1 style={{width:'150px'}}>VS</h1>
 
                 <div>
+                    <h2> {isReadyPlayer2} </h2>
                     <img style={{width:'110px', height:'110px'}} src={playerTwoChoice ? picture(playerTwoChoice) : unknown} alt='player two'/>
                     <h2>SCORE</h2>
-                    <h1> {computerScore} </h1>
-
+                    <h1> {playerTwoScore} </h1>
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "center", minHeight: "100px", color:"white"}}>
