@@ -4,11 +4,18 @@ import paper from './../pictures/paper.jpg'
 import rock from './../pictures/rock.jpg'
 import scissors from './../pictures/scissors.jpg'
 import spock from './../pictures/spock.jpg'
+import player1 from './../pictures/player1.jpg'
+
+
 
 const OptionsPlayer = ({setAnOption}) => {
 
     return (
-        <div>
+        <div style= {{paddingTop: "40px"}}>
+
+            <img src={player1} alt='' style={{width:'110px', height:'48px'}}/> 
+
+            
             <div onClick={() => setAnOption('rock')}>
                 <img src={rock} alt='rock' style={{width:'110px',height:'110px', cursor: "pointer"}}/>
             </div>

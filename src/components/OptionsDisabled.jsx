@@ -4,11 +4,16 @@ import paper from './../pictures/paper.jpg'
 import rock from './../pictures/rock.jpg'
 import scissors from './../pictures/scissors.jpg'
 import spock from './../pictures/spock.jpg'
+import computer from './../pictures/computer.jpg'
+
 
 const OptionsDisabled = () => {
 
     return (
-        <div>
+        <div style= {{paddingTop: "40px"}}>
+
+            <img src={computer} alt='' style={{width:'110px', height:'48px'}}/> 
+
             <div>
                 <img src={rock} alt='rock' style={{width:'110px',height:'110px'}}/>
             </div>

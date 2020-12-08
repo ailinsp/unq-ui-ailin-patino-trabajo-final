@@ -28,7 +28,7 @@ function Landing(){
                         <img alt={""} src={rules} style={{width:'400px',height:'66px', padding:'10px' }}/>
                     </NavLink>
 
-                    <NavLink to={`/play`}>
+                    <NavLink to={`/onePlayer`}>
                         <img alt={""} src={onePlayer} style={{width:'400px',height:'66px', padding:'10px' }}/>
                     </NavLink>
 

@@ -7,7 +7,7 @@ import scissors from './../pictures/scissors.jpg'
 import spock from './../pictures/spock.jpg'
 
 
-const GameResult= ({result, playerOneChoice, playerTwoChoice}) => {
+const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, computerScore}) => {
 
     const picture = (choice) => {
         if (choice === "rock"){
@@ -30,13 +30,26 @@ const GameResult= ({result, playerOneChoice, playerTwoChoice}) => {
     return(
         <div>
 
-            <div style={{display: "flex", justifyContent: "center"}}>
-                {!result && <h1>VS</h1>}
-                {result && <p>{result.message}</p>}
+            <div style={{display: "flex", justifyContent: "center", paddingTop: "100px", textAlign: "center", color: "white"}}>
+                
+                <div>
+                    <img style={{width:'110px', height:'110px'}} src={playerOneChoice ? picture(playerOneChoice) : unknown} alt='player one'/>
+                    <h2>SCORE</h2>
+                    <h1> {playerOneScore} </h1>
+                </div>
+
+                <h1 style={{width:'150px'}}>VS</h1>
+
+                <div>
+                    <img style={{width:'110px', height:'110px'}} src={playerTwoChoice ? picture(playerTwoChoice) : unknown} alt='player two'/>
+                    <h2>SCORE</h2>
+                    <h1> {computerScore} </h1>
+
+                </div>
             </div>
-            <div style={{display: "flex", justifyContent: "center"}}>
-                <img style={{width:'110px', height:'110px', paddingRight: "30px"}} src={playerOneChoice ? picture(playerOneChoice) : unknown} alt='player one' />
-                <img style={{width:'110px', height:'110px', paddingLeft: "30px"}} src={playerTwoChoice ? picture(playerTwoChoice) : unknown} alt='player two'/>
+            <div style={{display: "flex", justifyContent: "center", minHeight: "100px", color:"white"}}>
+                {!result}
+                {result && <h1>{result.message}</h1>}
             </div>
 
         </div>
