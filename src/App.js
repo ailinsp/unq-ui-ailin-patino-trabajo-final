@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Landing from './components/Landing';
-import Navbar from './components/Navbar';
 import Rules from './components/Rules';
 import Game from './components/Game';
 

@@ -5,7 +5,7 @@ import rock from './../pictures/rock.jpg'
 import scissors from './../pictures/scissors.jpg'
 import spock from './../pictures/spock.jpg'
 
-const Options = ({setAnOption}) => {
+const OptionsPlayer = ({setAnOption}) => {
 
     return (
         <div>
@@ -32,4 +32,4 @@ const Options = ({setAnOption}) => {
     )
 }
 
-export default Options;
+export default OptionsPlayer;

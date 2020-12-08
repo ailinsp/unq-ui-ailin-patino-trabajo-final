@@ -1,8 +1,13 @@
 import React, { useState }  from 'react';
+import {NavLink} from 'react-router-dom';
 import GameResult from './GameResult';
-import Options from './Options';
+import OptionsPlayer from './OptionsPlayer';
+import OptionsDisabled from './OptionsDisabled';
 import Play from './Play';
-import { Button } from 'antd';
+import showResult from './../pictures/showResult.jpg'
+import restartGame from './../pictures/restartGame.jpg'
+import back from './../pictures/back.jpg'
+
 
 
 function Game(){
@@ -20,10 +25,12 @@ function Game(){
     }
 
     const play = () => {
-        const result = Play.startGame(playerOneChoice, randomChoice);
-        setResult(result);
-        if (result.finish==='won') setPlayerOneScore(playerOneScore+1); 
-        if (result.finish==='lost') setComputerScore(computerScore+1);
+        if(playerOneChoice){
+            const result = Play.startGame(playerOneChoice, randomChoice);
+            setResult(result);
+            if (result.finish==='won') setPlayerOneScore(playerOneScore+1); 
+            if (result.finish==='lost') setComputerScore(computerScore+1); 
+        }
     }
 
     const reset = () => {
@@ -44,23 +51,29 @@ function Game(){
         <div style={{display: "flex", justifyContent: "center", paddingTop: "80px"}}>
 
             <div>
-                <Options setAnOption={handleSelect}/>                
+                <OptionsPlayer setAnOption={handleSelect}/>                
             </div>
 
             <div style={{justifyContent: "center", minWidth:"800px"}}>
-                <GameResult result={result} playerOneChoice={playerOneChoice}
-                       playerTwoChoice={randomChoice} />
+
+                <GameResult result={result} playerOneChoice={playerOneChoice} playerTwoChoice={randomChoice} />
 
                 <div style={{ display: "flex", justifyContent: "center", cursor: "pointer"}}>
-                    <Button type="primary" shape="round" onClick={() => play()}> PLAY! </Button>
+                    <img style={{width:'400px', height:'66px'}} src={showResult} alt="" onClick={() => play()}/>
                 </div>
-                <div style={{ display: "flex", justifyContent: "center"}}>
-                    <Button type="primary" shape="round" onClick={() => reset()}> RESET GAME </Button>
+
+                <div style={{ display: "flex", justifyContent: "center", cursor: "pointer"}}>
+                    <img style={{width:'400px', height:'66px'}} src={restartGame} alt="" onClick={() => reset()}/>
                 </div>
+
+                <NavLink style={{ display: "flex", justifyContent: "center", cursor: "pointer"}} to={`/`}>
+                    <img style={{width:'400px', height:'66px'}} src={back} alt=""/>
+                </NavLink>
+
             </div>
 
             <div >
-                <Options setAnOption={handleSelect}/>
+                <OptionsDisabled/>
             </div>
 
     

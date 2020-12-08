@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'antd';
 import {NavLink} from 'react-router-dom';
 import logo from './../pictures/rpslsLogo.jpg'
 import rules from './../pictures/rules.jpg'
