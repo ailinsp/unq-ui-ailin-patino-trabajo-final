@@ -5,6 +5,9 @@ import paper from './../pictures/paper.jpg'
 import rock from './../pictures/rock.jpg'
 import scissors from './../pictures/scissors.jpg'
 import spock from './../pictures/spock.jpg'
+import vs from './../pictures/vs.jpg'
+import p1score from './../pictures/p1score.jpg'
+import p2score from './../pictures/p2score.jpg'
 
 
 const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, playerTwoScore, isReadyPlayer1, isReadyPlayer2}) => {
@@ -39,14 +42,14 @@ const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, pl
                             <h2> {isReadyPlayer1} </h2>
                         </div>                    
                         
-                        <div style={{height: "50px", paddingTop: "50px"}}>
-                            <h2>SCORE</h2>
+                        <div style={{height: "50px", paddingTop: "25px"}}>
+                            <img style={{width:'100px', height:'47px', marginTop:"30px"}} src={p1score} alt="vs"/>
                             <h1> {playerOneScore} </h1>
                         </div>
 
                 </div>
 
-                <h1 style={{width:'150px'}}>VS</h1>
+                <img style={{width:'90px', height:'83px', padding:"20px"}} src={vs} alt="vs"/>
 
                 <div style={{height: "100px"}}>
                     <img style={{width:'110px', height:'110px'}} src={playerTwoChoice ? picture(playerTwoChoice) : unknown} alt='player two'/>
@@ -54,8 +57,8 @@ const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, pl
                         <h2> {isReadyPlayer2} </h2>
                     </div>
 
-                    <div style={{height: "50px", paddingTop: "50px"}}>
-                        <h2>SCORE</h2>
+                    <div style={{height: "50px", paddingTop: "25px"}}>
+                        <img style={{width:'100px', height:'47px', marginTop:"30px"}} src={p2score} alt="vs"/>
                         <h1> {playerTwoScore} </h1>
                     </div>
                 </div>

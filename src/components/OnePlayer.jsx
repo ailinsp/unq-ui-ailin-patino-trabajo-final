@@ -32,6 +32,7 @@ function OnePlayer(){
             if (result.finish==='lost') setComputerScore(computerScore+1); 
         }
         setRandomChoiceView(randomChoice)
+        setRandomChoice(null);
     }
 
     const reset = () => {
@@ -68,11 +69,11 @@ function OnePlayer(){
                         <img style={{width:'400px', height:'66px', cursor: "pointer"}} src={start} alt="" onClick={() => play()}/>
                     </div>
 
-                    <div style={{ display: "flex", justifyContent: "center", paddingTop:"90px"}}>
+                    <div style={{ display: "flex", justifyContent: "center", paddingTop:"60px"}}>
                         <img style={{width:'200px', height:'32px', cursor: "pointer"}} src={restartGame} alt="" onClick={() => reset()}/>
                     </div>
 
-                    <NavLink style={{ display: "flex", justifyContent: "center", paddingTop: "10px"}} to={`/`}>
+                    <NavLink style={{ display: "flex", justifyContent: "center", paddingTop: "15px"}} to={`/`}>
                         <img style={{width:'200px', height:'32px', cursor: "pointer"}} src={back} alt=""/>
                     </NavLink>
                     
