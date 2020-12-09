@@ -28,6 +28,7 @@ function TwoPlayers(){
 
             if (result.finish==='won') setPlayerOneScore(playerOneScore+1); 
             if (result.finish==='lost') setPlayerTwoScore(playerTwoScore+1);
+            
             setPlayerOneChoiceView(playerOneChoice)
             setPlayerTwoChoiceView(playerTwoChoice) 
             setIsReadyPlayer1(null)
