@@ -8,7 +8,6 @@ import player1 from './../pictures/player1.jpg'
 import player2 from './../pictures/player2.jpg'
 
 
-
 const OptionsPlayer = ({setAnOption, playerRole}) => {
 
     const player = (type) => {

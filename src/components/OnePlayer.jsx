@@ -1,11 +1,11 @@
 import React, { useState }  from 'react';
 import {NavLink} from 'react-router-dom';
+import Play from './Play';
 import GameResult from './GameResult';
 import OptionsPlayer from './OptionsPlayer';
 import OptionsDisabled from './OptionsDisabled';
-import Play from './Play';
-import start from './../pictures/play.jpg'
 import restartGame from './../pictures/restartGame.jpg'
+import start from './../pictures/play.jpg'
 import back from './../pictures/back.jpg'
 
 
@@ -62,18 +62,20 @@ function OnePlayer(){
                 <GameResult result={result} playerOneChoice={playerOneChoice} playerTwoChoice={randomChoiceView} 
                             playerOneScore={playerOneScore} playerTwoScore={computerScore}/>
 
-                <div style={{paddingTop: "10px"}}>
-                    <div style={{ display: "flex", justifyContent: "center", cursor: "pointer"}}>
-                        <img style={{width:'400px', height:'66px'}} src={start} alt="" onClick={() => play()}/>
+                <div style={{paddingTop: "120px"}}>
+
+                    <div style={{ display: "flex", justifyContent: "center"}}>
+                        <img style={{width:'400px', height:'66px', cursor: "pointer"}} src={start} alt="" onClick={() => play()}/>
                     </div>
 
-                    <div style={{ display: "flex", justifyContent: "center", cursor: "pointer", paddingTop:"40px"}}>
-                        <img style={{width:'200px', height:'32px'}} src={restartGame} alt="" onClick={() => reset()}/>
+                    <div style={{ display: "flex", justifyContent: "center", paddingTop:"90px"}}>
+                        <img style={{width:'200px', height:'32px', cursor: "pointer"}} src={restartGame} alt="" onClick={() => reset()}/>
                     </div>
 
-                    <NavLink style={{ display: "flex", justifyContent: "center", cursor: "pointer", paddingTop: "10px"}} to={`/`}>
-                        <img style={{width:'200px', height:'32px'}} src={back} alt=""/>
+                    <NavLink style={{ display: "flex", justifyContent: "center", paddingTop: "10px"}} to={`/`}>
+                        <img style={{width:'200px', height:'32px', cursor: "pointer"}} src={back} alt=""/>
                     </NavLink>
+                    
                 </div>
 
             </div>

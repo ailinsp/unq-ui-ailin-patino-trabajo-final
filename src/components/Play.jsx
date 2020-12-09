@@ -5,134 +5,136 @@ const isLizard   = (item) => item==='lizard';
 const isSpock    = (item) => item==='spock';
 
 const startGame = (playerItem, anotherItem) =>{
+
     const result = {finish: 'warning', message: ''};
-    const fstPlayer = 'Player 1'
-    const sndPlayer = 'Player 2'
+    const playerOne = 'Player 1'
+    const playerTwo = 'Player 2'
+
     switch (playerItem){
+
         case('rock') :
-            if(isRock(anotherItem)) result.message =`The rocks crashes, It's a tie...`;
+            if(isRock(anotherItem)) result.message =`It's a tie!`;
             
             if(isScissors(anotherItem)) {
-                result.message=`Rock destroys Scissors, ${fstPlayer} won!`;
+                result.message=`Rock crushes Scissors, ${playerOne} wins!`;
                 result.finish='won'
             };
 
             if(isPaper(anotherItem)) {
-                result.message=`Paper wrap the Rock, ${sndPlayer} won!`;
+                result.message=`Paper covers Rock, ${playerTwo} wins!`;
                 result.finish='lost';
             };
 
             if(isLizard(anotherItem)) {
-                result.message=`Rock destroys the Lizard, ${fstPlayer} won!`;
+                result.message=`Rock crushes Lizard, ${playerOne} wins!`;
                 result.finish='won';
             };
 
             if(isSpock(anotherItem)) {
-                result.message=`Spock vaporized the Rock, ${sndPlayer} won!`;
+                result.message=`Spock vaporizes Rock, ${playerTwo} wins!`;
                 result.finish='lost';
             };
         break;
         
         case('scissors') :
             if(isRock(anotherItem)){
-                result.message =`Rock destroys Scissors, ${sndPlayer} won!`;
+                result.message =`Rock crushes Scissors, ${playerTwo} wins!`;
                 result.finish='lost'
             };
                 
-            if(isScissors(anotherItem)) result.message=`The Scissors crashes, It's a tie...`;;
+            if(isScissors(anotherItem)) result.message=`It's a tie!`;;
 
             if(isPaper(anotherItem)) {
-                result.message=`Scissors cuts Paper, ${fstPlayer} won!`;
+                result.message=`Scissors cuts Paper, ${playerOne} wins!`;
                 result.finish='won';
             };
 
             if(isLizard(anotherItem)) {
-                result.message=`Scissors beheads Lizard, ${fstPlayer} won!`;
+                result.message=`Scissors decapitates Lizard, ${playerOne} wins!`;
                 result.finish='won';
             };
 
             if(isSpock(anotherItem)) {
-                result.message=`Spock breaks Scissors, ${sndPlayer} won!`;
+                result.message=`Spock smashes Scissors, ${playerTwo} wins!`;
                 result.finish='lost';
             };
         break;
 
         case('paper') :
             if(isRock(anotherItem)){ 
-                result.message =`Paper cover the Rock, ${fstPlayer} won!`;
+                result.message =`Paper covers Rock, ${playerOne} wins!`;
                 result.finish = 'won';
             };
             
             if(isScissors(anotherItem)) {
-                result.message=`Scissors cut to Paper, ${sndPlayer} won!`;
+                result.message=`Scissors cuts Paper, ${playerTwo} wins!`;
                 result.finish='lost'
             };
 
-            if(isPaper(anotherItem)) result.message=`The Papers crashes, It's a tie...`;
+            if(isPaper(anotherItem)) result.message=`It's a tie!`;
 
             if(isLizard(anotherItem)) {
-                result.message=`Lizard eats Paper, ${sndPlayer} won!`;
+                result.message=`Lizard eats Paper, ${playerTwo} wins!`;
                 result.finish='lost';
             };
 
             if(isSpock(anotherItem)) {
-                result.message=`Paper disavows Spock, ${fstPlayer} won!`;
+                result.message=`Paper disproves Spock, ${playerOne} wins!`;
                 result.finish='won';
             };
         break;
         
         case('lizard') :
             if(isRock(anotherItem)) {
-                result.message =`Stone destroys Lizard, ${sndPlayer} won!`;
+                result.message =`Rock crushes Lizard, ${playerTwo} wins!`;
                 result.finish='lost';
             }
             
             if(isScissors(anotherItem)) {
-                result.message=`Scissors beheads Lizard, ${sndPlayer} won!`;
+                result.message=`Scissors decapitates Lizard, ${playerTwo} wins!`;
                 result.finish='lost'
             };
 
             if(isPaper(anotherItem)) {
-                result.message=`Lizard eats Paper, ${fstPlayer} won!`;
+                result.message=`Lizard eats Paper, ${playerOne} wins!`;
                 result.finish='won';
             };
 
-            if(isLizard(anotherItem)) result.message=`The Lizards crashes, It's a tie...`;
+            if(isLizard(anotherItem)) result.message=`It's a tie!`;
 
             if(isSpock(anotherItem)) {
-                result.message=`Lizard Poisons Spock, ${fstPlayer} won!`;
+                result.message=`Lizard poisons Spock, ${playerOne} wins!`;
                 result.finish='won';
             };
         break;
         
         case('spock') :
             if(isRock(anotherItem)){
-                result.message =`Spock vaporized the rock, ${fstPlayer} won!`;
+                result.message =`Spock vaporizes rock, ${playerOne} wins!`;
                 result.finish = 'won';
             };
             
             if(isScissors(anotherItem)) {
-                result.message=`Spock breaks scissors, ${fstPlayer} won!`;
+                result.message=`Spock smashes scissors, ${playerOne} wins!`;
                 result.finish='won'
             };
 
             if(isPaper(anotherItem)) {
-                result.message=`Paper disavows Spock, ${sndPlayer} won!`;
+                result.message=`Paper disproves Spock, ${playerTwo} wins!`;
                 result.finish='lost';
             };
 
             if(isLizard(anotherItem)) {
-                result.message=`Lizard Poisons Spock, ${sndPlayer} won!`;
+                result.message=`Lizard poisons Spock, ${playerTwo} wins!`;
                 result.finish='lost';
             };
 
-            if(isSpock(anotherItem)) result.message=`Spocks crashes, It's a tie...`;
+            if(isSpock(anotherItem)) result.message=`It's a tie!`;
         break;
+        
         default:;    
     }
     return result;
 }
 
-export default {
-    startGame
-};
+export default {startGame};

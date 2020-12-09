@@ -33,6 +33,7 @@ const OptionsDisabled = () => {
             <div>
                 <img src={spock} alt='spock' style={{width:'110px',height:'110px'}}/> 
             </div>
+            
         </div>
     )
 }

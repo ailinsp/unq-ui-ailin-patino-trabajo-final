@@ -2,7 +2,6 @@ import React, { useState }  from 'react';
 import {NavLink} from 'react-router-dom';
 import GameResult from './GameResult';
 import OptionsPlayer from './OptionsPlayer';
-import OptionsDisabled from './OptionsDisabled';
 import Play from './Play';
 import start from './../pictures/play.jpg'
 import restartGame from './../pictures/restartGame.jpg'
@@ -21,17 +20,21 @@ function TwoPlayers(){
     const [isReadyPlayer1, setIsReadyPlayer1] = useState(null);
     const [isReadyPlayer2, setIsReadyPlayer2] = useState(null);
 
-
-
     const play = () => {
         if(playerOneChoice && playerTwoChoice){
+
             const result = Play.startGame(playerOneChoice, playerTwoChoice);
             setResult(result);
+
             if (result.finish==='won') setPlayerOneScore(playerOneScore+1); 
-            if (result.finish==='lost') setPlayerTwoScore(playerTwoScore+1); 
+            if (result.finish==='lost') setPlayerTwoScore(playerTwoScore+1);
+            setPlayerOneChoiceView(playerOneChoice)
+            setPlayerTwoChoiceView(playerTwoChoice) 
+            setIsReadyPlayer1(null)
+            setIsReadyPlayer2(null)
+            setPlayerOneChoice(null)
+            setPlayerTwoChoice(null)
         }
-        setPlayerOneChoiceView(playerOneChoice)
-        setPlayerTwoChoiceView(playerTwoChoice)
     }
 
     const reset = () => {
@@ -75,18 +78,20 @@ function TwoPlayers(){
                             playerOneScore={playerOneScore} playerTwoScore={playerTwoScore} 
                             isReadyPlayer1={isReadyPlayer1} isReadyPlayer2={isReadyPlayer2}/>
 
-                <div style={{paddingTop: "10px"}}>
-                    <div style={{ display: "flex", justifyContent: "center", cursor: "pointer"}}>
-                        <img style={{width:'400px', height:'66px'}} src={start} alt="" onClick={() => play()}/>
+                <div style={{paddingTop: "120px"}}>
+
+                    <div style={{ display: "flex", justifyContent: "center"}}>
+                        <img style={{width:'400px', height:'66px', cursor: "pointer"}} src={start} alt="" onClick={() => play()}/>
                     </div>
 
-                    <div style={{ display: "flex", justifyContent: "center", cursor: "pointer", paddingTop:"40px"}}>
-                        <img style={{width:'200px', height:'32px'}} src={restartGame} alt="" onClick={() => reset()}/>
+                    <div style={{ display: "flex", justifyContent: "center", paddingTop:"90px"}}>
+                        <img style={{width:'200px', height:'32px', cursor: "pointer"}} src={restartGame} alt="" onClick={() => reset()}/>
                     </div>
 
-                    <NavLink style={{ display: "flex", justifyContent: "center", cursor: "pointer", paddingTop: "10px"}} to={`/`}>
-                        <img style={{width:'200px', height:'32px'}} src={back} alt=""/>
+                    <NavLink style={{ display: "flex", justifyContent: "center", paddingTop: "10px"}} to={`/`}>
+                        <img style={{width:'200px', height:'32px', cursor: "pointer"}} src={back} alt=""/>
                     </NavLink>
+
                 </div>
 
             </div>
@@ -95,7 +100,6 @@ function TwoPlayers(){
                 <OptionsPlayer setAnOption={handleSelectPlayer2} playerRole={"player2"}/>
             </div>
 
-    
         </div>
     )
 }

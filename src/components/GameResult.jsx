@@ -29,28 +29,41 @@ const GameResult= ({result, playerOneChoice, playerTwoChoice, playerOneScore, pl
 
     return(
         <div>
-
             <div style={{display: "flex", justifyContent: "center", paddingTop: "100px", textAlign: "center", color: "white"}}>
                 
-                <div>
-                    <h2> {isReadyPlayer1} </h2>
-                    <img style={{width:'110px', height:'110px'}} src={playerOneChoice ? picture(playerOneChoice) : unknown} alt='player one'/>
-                    <h2>SCORE</h2>
-                    <h1> {playerOneScore} </h1>
+                <div style={{height: "100px"}}>
+
+                        <img style={{width:'110px', height:'110px'}} src={playerOneChoice ? picture(playerOneChoice) : unknown} alt='player one'/>
+                        
+                        <div style={{height: "10px"}}>
+                            <h2> {isReadyPlayer1} </h2>
+                        </div>                    
+                        
+                        <div style={{height: "50px", paddingTop: "50px"}}>
+                            <h2>SCORE</h2>
+                            <h1> {playerOneScore} </h1>
+                        </div>
+
                 </div>
 
                 <h1 style={{width:'150px'}}>VS</h1>
 
-                <div>
-                    <h2> {isReadyPlayer2} </h2>
+                <div style={{height: "100px"}}>
                     <img style={{width:'110px', height:'110px'}} src={playerTwoChoice ? picture(playerTwoChoice) : unknown} alt='player two'/>
-                    <h2>SCORE</h2>
-                    <h1> {playerTwoScore} </h1>
+                    <div style={{height: "10px"}}>
+                        <h2> {isReadyPlayer2} </h2>
+                    </div>
+
+                    <div style={{height: "50px", paddingTop: "50px"}}>
+                        <h2>SCORE</h2>
+                        <h1> {playerTwoScore} </h1>
+                    </div>
                 </div>
             </div>
+            
             <div style={{display: "flex", justifyContent: "center", minHeight: "100px", color:"white"}}>
                 {!result}
-                {result && <h1>{result.message}</h1>}
+                {result && <h2>{result.message}</h2>}
             </div>
 
         </div>

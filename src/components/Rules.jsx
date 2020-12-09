@@ -1,51 +1,25 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import rules from './../pictures/rpslsExplained.jpg'
-import { List, Typography } from 'antd';
-
-
+import back from './../pictures/back.jpg'
 
 function Rules(){
-    const data = [
-        'Tijera corta a Papel',
-        'Papel tapa a Piedra',
-        'Piedra aplasta a Lagarto',
-        'Lagarto envenena a Spock',
-        'Spock rompe a Tijera',
-        'Tijera decapita a Lagarto',
-        'Lagarto devora a Papel',
-        'Papel desautoriza a Spock',
-        'Spock vaporiza a Piedra',
-        'y como siempre, Piedra aplasta a Tijera'
-      ];
-      
     
     return(
-        <div>
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                paddingTop: "20px"
                 }}> 
-                <img alt={""} src={rules} style={{width:'500px',height:'500px'}}/>
-            </div>
-            <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                }}>
-                <List
-                    bordered
-                    dataSource={data}
-                    renderItem={item => (
-                        <List.Item>
-                            <Typography.Text></Typography.Text> {item}
-                        </List.Item>
-                        )}
-                />
-                
+
+                <img alt={""} src={rules} style={{width:'1200px',height:'639px'}}/>
+
+                <NavLink style={{ display: "flex", justifyContent: "center"}} to={`/`}>
+                    <img style={{width:'300px', height:'49px', cursor: "pointer"}} src={back} alt=""/>
+                </NavLink>
 
             </div>
-        </div>
     )
 }
 

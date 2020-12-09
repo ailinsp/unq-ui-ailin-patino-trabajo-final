@@ -18,10 +18,10 @@ function Landing(){
             paddingTop: '50px',
             }}> 
 
-            <img alt={""} src={logo} style={{width:'662px',height:'254px'}}/>
+            <img alt={""} src={logo} style={{width:'662px', height:'254px'}}/>
             
             <NavLink to={`/rules`}>
-                <img alt={""} src={rules} style={{width:'400px',height:'66px', padding:'10px' }}/>
+                <img alt={""} src={rules} style={{width:'400px',height:'66px', paddingTop:"50px", padding:'10px' }}/>
             </NavLink>
 
             <NavLink to={`/onePlayer`}>
